@@ -42,15 +42,15 @@ echo "+----------------------------------------------------------------+"
 if [[ "$1" == "-f" ]];
 then
 	touch "date-sys-${hostname}.log"
-	echo "+----------------------------------------------------------------+" >> output.log
-	echo "|                        Systemleistungen                        |" >> output.log
-	echo "+----------------------------------------------------------------+" >> output.log
-	printf "| Akt. Syszeit       | %s\n| Akt. Syslaufzeit   | %s\n" "$sysDate" "$sysUptime" >> output.log
-	printf "| Speicher           | %s\n| Davon genutzt      | %s\n" "$size" "$used" >> output.log
-	printf "| Hostname           | %s\n| IPv4               | %s\n" "$hostname" "$ipAdress" >> output.log
-	printf "| OS Name            | %s\n| OS Version         | %s\n" "$osName" "$osVersion" >> output.log
-	printf "| CPU Name           | %s\n| CPU Cores          | %s\n" "$cpuName" "$cpuCores" >> output.log
-	printf "| RAM                | %s\n| Davon genutzt      | %s\n" "$totalMemory" "$usedMemory" >> output.log
-	echo "+----------------------------------------------------------------+" >> output.log
+	echo "+----------------------------------------------------------------+" >> "date-sys-${hostname}.log"
+	echo "|                        Systemleistungen                        |" >> "date-sys-${hostname}.log"
+	echo "+----------------------------------------------------------------+" >> "date-sys-${hostname}.log"
+	printf "| Akt. Syszeit       | %s\n| Akt. Syslaufzeit   | %s\n" "$sysDate" "$sysUptime" >> "date-sys-${hostname}.log"
+	printf "| Speicher           | %s\n| Davon genutzt      | %s\n" "$size" "$used" >> "date-sys-${hostname}.log"
+	printf "| Hostname           | %s\n| IPv4               | %s\n" "$hostname" "$ipAdress" >> "date-sys-${hostname}.log"
+	printf "| OS Name            | %s\n| OS Version         | %s\n" "$osName" "$osVersion" >> "date-sys-${hostname}.log"
+	printf "| CPU Name           | %s\n| CPU Cores          | %s\n" "$cpuName" "$cpuCores" >> "date-sys-${hostname}.log"
+	printf "| RAM                | %s\n| Davon genutzt      | %s\n" "$totalMemory" "$usedMemory" >> "date-sys-${hostname}.log"
+	echo "+----------------------------------------------------------------+" >> "date-sys-${hostname}.log"
 	echo "Logfile wurde erweitert"
 fi
